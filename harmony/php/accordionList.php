@@ -48,7 +48,7 @@ foreach(glob($this->phpPath().'harmonydb/*.json') as $file){
     <div class="harmony-file-btn">
 
     <a class="btn btn-primary" href="'.DOMAIN_ADMIN.'plugin/harmony?editharmony='.$name.'">Edit</a>
-    <a class="btn btn-danger" href="'.DOMAIN_ADMIN.'plugin/harmony?deleteharmony='.$name.'">Delete</a>
+    <a class="btn btn-danger" onclick="return confirm(`Are you sure you want to delete this item?`);" href="'.DOMAIN_ADMIN.'plugin/harmony?deleteharmony='.$name.'">Delete</a>
 
     </div>
 

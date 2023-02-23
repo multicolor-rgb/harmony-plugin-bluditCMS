@@ -2,6 +2,6 @@
     "plugin-data":
     {
         "name": "Harmony",
-        "description": "Easy accordion and tabs creator based on Bootstrap"
+        "description": "Easy accordion and tabs creator based on Bootstrap and prebuild styles"
     }
 }

@@ -60,6 +60,23 @@ id="title" name="title" pattern="[a-zA-Z0-9]+" required>
 	?>
 	
 	>Accordion (bootstrap required)</option>
+
+
+	<option value="harmony-accordion"
+	
+	<?php 
+	 if(isset($_GET['editharmony'])){
+		$arrayItem = file_get_contents($this->phpPath().'harmonydb/'.$_GET['editharmony'].'.json');
+		$jsonArray = json_decode($arrayItem);
+		if($jsonArray->style == 'harmony-accordion'){
+			echo 'selected';
+		}
+	 };
+	?>
+	
+	>Harmony Accordion</option>
+
+
     <option value="tabs" 
 	
 	<?php 
@@ -74,6 +91,23 @@ id="title" name="title" pattern="[a-zA-Z0-9]+" required>
 	?>
 	
 	>Tabs (bootstrap required)</option>
+
+
+	<option value="harmony-tabs" 
+	
+	<?php 
+	 if(isset($_GET['editharmony'])){
+		$arrayItem = file_get_contents($this->phpPath().'harmonydb/'.$_GET['editharmony'].'.json');
+		$jsonArray = json_decode($arrayItem);
+
+		if($jsonArray->style == 'harmony-tabs'){
+			echo 'selected';
+		}
+	 };
+	?>
+	
+	>Harmony Tabs</option>
+
 </select>
 
 

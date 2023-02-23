@@ -85,6 +85,16 @@
             $page->setField('content', $newcontent);
         }
     
+        public function siteHead(){
+        echo '	<link rel="stylesheet" type="text/css" href="'.$this->domainPath().'css/harmony-accordion.css">';
+        echo '	<link rel="stylesheet" type="text/css" href="'.$this->domainPath().'css/harmony-tab.css">';
+        }
+
+
+        public function siteBodyEnd(){
+            echo '<script src="'.$this->htmlPath().'js/harmony-accordion.js"></script>';
+            echo '<script src="'.$this->htmlPath().'js/harmony-tab.js"></script>';
+        }
 
     }
 
@@ -109,6 +119,13 @@ include(PATH_PLUGINS.'harmony/php/tabs.php');
     include(PATH_PLUGINS.'harmony/php/accordion.php');
      };
 
+      if($style == 'harmony-accordion'){
+    include(PATH_PLUGINS.'harmony/php/harmony-accordion.php');
+     };
+
+      if($style == 'harmony-tabs'){
+    include(PATH_PLUGINS.'harmony/php/harmony-tabs.php');
+     };
 return $harmonyShows;
 
 }
